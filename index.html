@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expenses app</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="reset.css"> 
+      <link rel="stylesheet" href="index.css">
+      </head>
+      <body>
+    <div class="container">
+        <h1>Учет расходов</h1>
+        <div class="expenses">
+          <div class="expenses__input">
+            <div class="moneyInput rub">
+              <input class="js-moneyInput__input moneyInput__input" type="number" min="1"> 
+            </div>
+            
+          <select name id class="js-categorySelectNode categorySelect">
+            <option hidden disabled selected value="Категория">Категория</option>
+            <option value="Продукты">Продукты</option>
+            <option value="Кафе">Кафе и рестораны</option>
+            <option value="Авто">Авто</option>
+          </select>
+          </div>
+      
+          <button class="js-addButton add-button text">Добавить</button>
+      
+          <div class="expenses__sum">
+            <div class="expenses__limit ">
+              <p class="label">Лимит: <span class="js-limit text rub">10000</span> 
+                <button class="js-btn_limit btn_limit">
+                  <img src="./img/img_pen.png" alt="">
+               </button> 
+              </p>
+            </div>
+           
+            <div class="expenses__total ">
+              <p class="label">Всего: <span class="js-sum text rub"></span></p>
+            </div>
+            
+            <div class="expeneses__status ">
+              <span class="label">Статус:</span>
+               <span class="js-status status"></span>
+            </div>  
+          </div>
+         <div class="stats__history">
+             <h2 class="title title_history">История</h2>
+             <ol class="js-history text"></ol> 
+          </div>
+    
+          <button class="js-button_reset text button-reset">Сбросить расходы</button>
+        </div>
+        <div class="js-popup popup">
+          <div class="js-popup__content popup__content">
+          <h2 class="title">Новый лимит</h2>
+          <button class="js-popup__close-btn popup__close-btn"></button>
+          <input type="number" class="js-popup__input popup__input" placeholder="впиши сумму лимита"> 
+          <button class="js-popup__button text popup__button">Задать лимит</button>
+         </div>
+        </div>
+      
+      </div>
+
+    <script src="index.js"> </script>
+
+    </body>
+</html>
